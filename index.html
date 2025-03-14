@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincrono 3: Pestañas</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body class="body">
+    <div id="container" class="container">
+        <div class="opciones">
+            <h3 id="opciones__titulo" class="opciones__titulo">Opción 0</h3>
+            <h3 id="opciones__titulo" class="opciones__titulo">Opción 1</h3>
+            <h3 id="opciones__titulo" class="opciones__titulo">Opción 2</h3>
+        </div>
+        <div class="content">
+            <div id="bloque" class="bloque">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem vitae delectus labore eos unde
+                cum
+                nihil! Voluptatem dolorem excepturi similique quisquam repudiandae, blanditiis labore impedit fugit
+                voluptatum ut accusamus cumque?
+
+            </div>
+            <div id="bloque" class="bloque">Voluptates odit necessitatibus eos hic animi mollitia, optio atque id culpa expedita
+                nisi cupiditate nam quae doloremque qui esse officia dicta, laboriosam illo perspiciatis ipsam vel cum
+                ut. Molestiae, quia.
+
+            </div>
+            <div id="bloque" class="bloque">Placeat temporibus, dolor tempora doloremque modi ratione rem perferendis enim, ad
+                exercitationem vero fuga sunt officia? Odit quaerat dolore consequuntur! Hic nulla similique, placeat
+                quisquam voluptate accusantium. Eligendi, amet aliquid.
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const container = document.querySelector("#container");
+        const listaTitulos = container.querySelectorAll("#opciones__titulo");
+        const listaBloques = container.querySelectorAll("#bloque");
+
+
+        listaTitulos.forEach((titulo, i) => {
+            listaTitulos[i].addEventListener("click", () =>{
+                listaTitulos.forEach((titulo, i) => {
+                    listaTitulos[i].classList.remove("activo");
+                    listaBloques[i].classList.remove("activo");
+                })
+                listaTitulos[i].classList.add("activo");
+                listaBloques[i].classList.add("activo");
+            })
+        })
+
+    </script>
+</body>
+
+</html>
